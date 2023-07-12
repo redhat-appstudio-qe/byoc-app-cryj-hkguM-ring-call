@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: dgup
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: dgup
+    app.kubernetes.io/part-of: byoc-app-cryj
+  name: dgup
+spec:
+  rules:
+  - host: dgup-byoc-flcl-tenant.apps.76a085f38d8ae6ba26ba.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: dgup
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
