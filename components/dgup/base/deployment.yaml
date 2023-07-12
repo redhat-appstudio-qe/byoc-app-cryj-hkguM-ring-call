@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: dgup
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-flcl-tenant/byoc-app-cryj/dgup@sha256:53f7f07c76ba5aa819d0d66afe591f91f275e2bf8e18922be04a30d312753119
         name: my-java-quarkus
         ports:
         - containerPort: 8081
